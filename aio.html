@@ -725,7 +725,7 @@ wrong with this data and how you would fix it.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Take about 10 minutes to work on this exercise.</li>
@@ -839,7 +839,7 @@ in order to analyze and interpret this data?”</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Some types of metadata that should be recorded and made available
 with the data are:</p>
@@ -1247,7 +1247,7 @@ spreadsheet look pretty.</li>
 </div>
 </section></section><section id="aio-03-dates-as-data"><p>Content from <a href="03-dates-as-data.html">Dates as Data</a></p>
 <hr>
-<p>Last updated on 2025-05-20 |
+<p>Last updated on 2025-11-18 |
 
         <a href="https://github.com/datacarpentry/spreadsheets-socialsci/edit/main/episodes/03-dates-as-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1340,8 +1340,10 @@ December, however a researcher from the US will interpret the same entry
 as the 12th day of July. This regional variation is handled
 automatically by your spreadsheet program so that when you are typing in
 dates they appear as you would expect. If you try to type in a US format
-date into a UK version of Excel, it may or may not be treated as a
-date.</p>
+date into a UK version of Excel, it may or may not be treated as a date.
+Which format is used by your spreadsheet program depends on how your
+computer is configured, and what country your computer thinks it is
+in.</p>
 <p>This regional variation is one good reason to treat dates, not as a
 single data point, but as three distinct pieces of data (year, month,
 and day). Separating dates into their component parts will avoid this
@@ -1361,9 +1363,11 @@ file. This file contains a subset of the data from the SAFI interviews,
 including the dates on which the interviews were conducted.</p>
 <p>Choose the tab of the spreadsheet that corresponds to the way you
 format dates in your location (either day first <code>DD_MM_YEAR</code>,
-or month first <code>MM_DD_YEAR</code>).</p>
-<p>Extract the components of the date to new columns. For this we can
-use the built-in Excel functions:</p>
+or month first <code>MM_DD_YEAR</code>). Which tab works will depend on
+the configuration of your computer.</p>
+<p>Extract the components of the date to new columns at the end of the
+existing data, starting at column H. For this we can use the built-in
+Excel functions:</p>
 <p><code>=YEAR()</code><br><code>=MONTH()</code><br><code>=DAY()</code></p>
 <p>Apply each of these formulas to its entire column. Make sure the new
 column is formatted as a number and not as a date.</p>
